@@ -3,6 +3,7 @@ from django.utils import timezone
 from datetime import datetime
 from todo.models import Task
 
+
 class TaskModelTestCase(TestCase):
     def test_create_task1(self):
         # テスト用の締切日時データを作成
@@ -37,7 +38,8 @@ class TaskModelTestCase(TestCase):
         task.save()
 
         self.assertFalse(task.is_overdue(current))
-    
+
+
 class TodoViewTestCase(TestCase):
     def test_index_get(self):
         client = Client()
